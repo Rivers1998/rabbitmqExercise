@@ -1,0 +1,20 @@
+server:
+  port: 8022
+spring:
+  # 项目名称
+  application:
+    name: rabbitmq-consumer
+  # 配置rabbitmq服务器
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/user
+    username: root
+    password: 1234
+mybatis:
+  mapper-locations: classpath:templates/mapper/*.xml
+  type-aliases-package: com.rabbitmq.consumer.entity
